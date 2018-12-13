@@ -73,9 +73,6 @@
 
     </LinearLayout>
 
-    <!--<FrameLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,13 +105,5 @@
             android:background="#3f00" />
 
     </LinearLayout>
-
-    <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:id="@+id/fragment">-->
-    <!--</RelativeLayout>-->
-
-    <!--</FrameLayout>-->
 
 </LinearLayout>
