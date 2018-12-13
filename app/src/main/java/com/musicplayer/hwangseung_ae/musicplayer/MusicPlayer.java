@@ -1,6 +1,7 @@
 package com.musicplayer.hwangseung_ae.musicplayer;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -84,10 +85,13 @@ public class MusicPlayer extends AppCompatActivity {
                 videoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 myButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment, new MusicFragment());
-                fragmentTransaction.commit();
+                Intent intent = new Intent(getApplicationContext(), MusicActivity.class);
+                startActivity(intent);
+
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.fragment, new MusicFragment());
+//                fragmentTransaction.commit();
             }
         });
 
@@ -100,10 +104,13 @@ public class MusicPlayer extends AppCompatActivity {
                 videoButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 myButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment, new VideoFragment());
-                fragmentTransaction.commit();
+                Intent intent = new Intent(getApplicationContext(), VideoActivity.class);
+                startActivity(intent);
+
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.fragment, new VideoFragment());
+//                fragmentTransaction.commit();
             }
         });
 
@@ -116,10 +123,13 @@ public class MusicPlayer extends AppCompatActivity {
                 videoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 myButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment, new MyFragment());
-                fragmentTransaction.commit();
+                Intent intent = new Intent(getApplicationContext(), UserActivity.class);
+                startActivity(intent);
+
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.fragment, new MyFragment());
+//                fragmentTransaction.commit();
             }
         });
     }
