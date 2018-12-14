@@ -137,9 +137,12 @@ public class MusicActivity extends AppCompatActivity {
         list = new ArrayList<>();
         //가져오고 싶은 컬럼 명을 나열합니다. 음악의 아이디, 앰블럼 아이디, 제목, 아스티스트 정보를 가져옵니다.
         String[] projection = {MediaStore.Audio.Media._ID,
+                MediaStore.Audio.Media._ID,
                 MediaStore.Audio.Media.ALBUM_ID,
                 MediaStore.Audio.Media.TITLE,
-                MediaStore.Audio.Media.ARTIST
+                MediaStore.Audio.Media.ALBUM,
+                MediaStore.Audio.Media.ARTIST,
+                MediaStore.Audio.Media.DATA
         };
 
         Cursor cursor = getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
@@ -147,7 +150,9 @@ public class MusicActivity extends AppCompatActivity {
 
         while(cursor.moveToNext()){
             MusicDto musicDto = new MusicDto();
+            musicDto.setId(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA)));
             musicDto.setId(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media._ID)));
+            musicDto.setAlbumId(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM)));
             musicDto.setAlbumId(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID)));
             musicDto.setTitle(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE)));
             musicDto.setArtist(cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST)));
@@ -155,6 +160,4 @@ public class MusicActivity extends AppCompatActivity {
         }
         cursor.close();
     }
-
-
 }
