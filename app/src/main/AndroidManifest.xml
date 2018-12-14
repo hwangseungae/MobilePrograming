@@ -3,7 +3,7 @@
     package="com.musicplayer.hwangseung_ae.musicplayer">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -31,7 +31,8 @@
         <activity android:name=".MusicActivity" />
         <activity android:name=".VideoActivity" />
         <activity android:name=".UserActivity" />
-        <activity android:name=".PlayingActivity"></activity>
+        <activity android:name=".PlayingActivity" />
+        <activity android:name=".MemoActivity"></activity>
     </application>
 
 </manifest>
