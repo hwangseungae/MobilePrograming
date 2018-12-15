@@ -56,7 +56,7 @@ public class UserActivity extends AppCompatActivity implements ListInterface, De
 
         list = ListFragment.newInstance(1);
         detail = MemoFragment.newInstance();
-        main = (FrameLayout) findViewById(R.id.activity_user);
+        main = (FrameLayout) findViewById(R.id.fragment_goto);
         manager = getSupportFragmentManager();
         try {
             loadData();
@@ -85,7 +85,7 @@ public class UserActivity extends AppCompatActivity implements ListInterface, De
     @Override
     public void goDetail(){
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(R.id.activity_user, detail);
+        transaction.add(R.id.fragment_goto, detail);
         transaction.addToBackStack(null);
         transaction.commit();
     }

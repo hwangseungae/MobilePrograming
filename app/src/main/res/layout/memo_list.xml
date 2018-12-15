@@ -25,25 +25,18 @@
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
             android:layout_margin="10dp"/>
-        '
-        <!--<ImageButton-->
-            <!--android:id="@+id/btnPlus"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:layout_alignRight="@+id/list"-->
-            <!--android:layout_alignEnd="@+id/list"-->
-            <!--android:scaleType="centerInside"-->
-            <!--android:background="@android:color/transparent"-->
-            <!--android:src="@drawable/plus_img"/>-->
 
 
-    <Button
-        android:text="+"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnPlus"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/list"
-        android:layout_alignEnd="@+id/list" />
+        <Button
+            android:text="+"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimary"
+            android:background="@android:color/transparent"
+        android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:id="@+id/btnPlus"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/list"
+            android:layout_alignEnd="@+id/list" />
 </RelativeLayout>
