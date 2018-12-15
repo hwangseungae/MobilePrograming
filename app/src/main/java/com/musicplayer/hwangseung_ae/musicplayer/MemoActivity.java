@@ -14,7 +14,7 @@ public class MemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_memo);
+        setContentView(R.layout.fragment_memo);
 
         mMenoEdit = (EditText)findViewById(R.id.memo_edit);
     }
