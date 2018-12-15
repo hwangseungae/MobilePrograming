@@ -33,38 +33,34 @@
         </ListView>
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="210dp"
+        android:id="@+id/activity_user">
 
-        <TextView
-            android:layout_width="280dp"
-            android:layout_height="50dp"
-            android:text="Memo"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="10dp"/>
-        '
-        <ImageButton
-            android:id="@+id/plus"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerInside"
-            android:background="@android:color/transparent"
-            android:src="@drawable/plus_img"/>
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+    <!---->
+            <!--<TextView-->
+                <!--android:layout_width="280dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:text="Memo"-->
+                <!--android:textSize="25dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="@color/colorPrimary"-->
+                <!--android:layout_margin="10dp"/>-->
+            <!--'-->
+            <!--<ImageButton-->
+                <!--android:id="@+id/plus"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:scaleType="centerInside"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:src="@drawable/plus_img"/>-->
+    <!---->
+        <!--</LinearLayout>-->
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="210dp">
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </ListView>
-    </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>

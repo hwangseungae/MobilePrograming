@@ -7,82 +7,82 @@
     android:padding="20dp"
     tools:context=".MemoActivity">
 
-   <LinearLayout
-       android:id="@+id/btn_layout"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginBottom="20dp"
-       android:orientation="horizontal">
+   <!--<LinearLayout-->
+       <!--android:id="@+id/btn_layout"-->
+       <!--android:layout_width="match_parent"-->
+       <!--android:layout_height="wrap_content"-->
+       <!--android:layout_marginBottom="20dp"-->
+       <!--android:orientation="horizontal">-->
 
-       <Button
-           android:id="@+id/load_btn"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_weight="1"
-           android:text="불러오기"
-           android:textColor="@color/colorPrimary"
-           android:background="@color/colorAccent"
-           android:onClick="onClick"/>
+       <!--<Button-->
+           <!--android:id="@+id/load_btn"-->
+           <!--android:layout_width="wrap_content"-->
+           <!--android:layout_height="wrap_content"-->
+           <!--android:layout_weight="1"-->
+           <!--android:text="불러오기"-->
+           <!--android:textColor="@color/colorPrimary"-->
+           <!--android:background="@color/colorAccent"-->
+           <!--android:onClick="onClick"/>-->
 
-       <Button
-           android:id="@+id/save_btn"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_weight="1"
-           android:text="저장하기"
-           android:onClick="onClick"/>
+       <!--<Button-->
+           <!--android:id="@+id/save_btn"-->
+           <!--android:layout_width="wrap_content"-->
+           <!--android:layout_height="wrap_content"-->
+           <!--android:layout_weight="1"-->
+           <!--android:text="저장하기"-->
+           <!--android:onClick="onClick"/>-->
 
-       <Button
-           android:id="@+id/delete_btn"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_weight="1"
-           android:text="삭제하기"
-           android:onClick="onClick"/>
+       <!--<Button-->
+           <!--android:id="@+id/delete_btn"-->
+           <!--android:layout_width="wrap_content"-->
+           <!--android:layout_height="wrap_content"-->
+           <!--android:layout_weight="1"-->
+           <!--android:text="삭제하기"-->
+           <!--android:onClick="onClick"/>-->
 
-   </LinearLayout>
-
-    <EditText
-        android:id="@+id/memo_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/btn_layout"
-        android:hint="메모할 내용을 입력하세요."
-        android:gravity="top"
-        android:background="#2525" />
-
-
-    <!--<Button-->
-        <!--android:text="Save"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:id="@+id/btnSave" />-->
+   <!--</LinearLayout>-->
 
     <!--<EditText-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:inputType="textPersonName"-->
-        <!--android:ems="10"-->
-        <!--android:layout_below="@+id/btnSave"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:id="@+id/editMemo"-->
-        <!--android:gravity="top"-->
-        <!--android:hint="Input your memo" />-->
-
-    <!--<Button-->
-        <!--android:text="Cancel"-->
+        <!--android:id="@+id/memo_edit"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_toLeftOf="@+id/btnSave"-->
-        <!--android:layout_toStartOf="@+id/btnSave"-->
-        <!--android:id="@+id/btnCancel" />-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_below="@+id/btn_layout"-->
+        <!--android:hint="메모할 내용을 입력하세요."-->
+        <!--android:gravity="top"-->
+        <!--android:background="#2525" />-->
+
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btnSave" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/btnSave"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editMemo"
+        android:gravity="top"
+        android:hint="Input your memo" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btnSave"
+        android:layout_toStartOf="@+id/btnSave"
+        android:id="@+id/btnCancel" />
 
 </RelativeLayout>
