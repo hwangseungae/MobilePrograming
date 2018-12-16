@@ -69,24 +69,28 @@ package com.musicplayer.hwangseung_ae.musicplayer;
 //}
 
 
+
+//public class MusicActivity extends Activity {
+
+
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
+import java.io.IOException;
+
 
 public class MusicActivity extends Activity {
+
+    Button btn1, btn2, btn3;
     MediaPlayer mp;
-
-    // 시작버튼
-    Button startButton;
-    //종료버튼
-    Button stopButton;
-
-    int playstopBtns[] = {R.id.startme, R.id.stopme, R.id.startbackwalk, R.id.stopbackwalk, R.id.startcry, R.id.stopcry,
-            R.id.startcure, R.id.stopcure, R.id.startluv, R.id.stopluv, R.id.startrelove, R.id.stoprelove};
-
-    int resMp3[] = {R.raw.mino, R.raw.twice, R.raw.ben, R.raw.shaun, R.raw.heize, R.raw.jennie};
+    SeekBar seekBar;
+    TextView text;
 
 
     @Override
@@ -94,36 +98,144 @@ public class MusicActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
 
-//        for (int btns : playstopBtns) {
-//            Button btn = (Button) findViewById(btns);
-//            btn.setOnClickListener(startButton);
-//        }
-        startButton = findViewById(R.id.startme);
-        stopButton = findViewById(R.id.stopme);
+        btn1 = (Button)findViewById(R.id.button1);
+        btn2 = (Button)findViewById(R.id.button2);
+        btn3 = (Button)findViewById(R.id.button3);
 
-        startButton.setOnClickListener(new View.OnClickListener() {
+        text = (TextView)findViewById(R.id.text1);
+
+
+        mp = MediaPlayer.create(MusicActivity.this, R.raw.test);
+
+        seekBar = (SeekBar)findViewById(R.id.playbar);
+        seekBar.setVisibility(ProgressBar.VISIBLE);
+        seekBar.setMax(mp.getDuration());
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
             @Override
-            public void onClick(View view) {
-                // MediaPlayer 객체 할당
-                mp = MediaPlayer.create(MusicActivity.this, R.raw.mino);
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if(fromUser) {
+                    mp.seekTo(progress);
+                }
+                int m = progress / 60000;
+                int s = (progress % 60000) / 1000;
+                String strTime = String.format("%02d:%02d", m, s);
+                text.setText(strTime);
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 mp.start();
+
+                Thread();
             }
         });
 
-        stopButton.setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                // 정지버튼
+            public void onClick(View v) {
                 mp.stop();
-                // 초기화
-                mp.reset();
+                try
+                {
+                    mp.prepare();
+                }
+                catch(IOException ie)
+                {
+                    ie.printStackTrace();
+                }
+                mp.seekTo(0);
             }
         });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp.pause();
+            }
+        });
+
+
+    }
+
+    public void Thread(){
+        Runnable task = new Runnable(){
+
+
+            public void run(){
+                // 음악이 재생중일때
+                while(mp.isPlaying()){
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    seekBar.setProgress(mp.getCurrentPosition());
+                }
+            }
+        };
+        Thread thread = new Thread(task);
+        thread.start();
     }
 
 
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 }
 
+
+
+//    MediaPlayer mp;
+
+//
+//
+//    int playstopBtns[] = {R.id.startme, R.id.stopme, R.id.startbackwalk, R.id.stopbackwalk, R.id.startcry, R.id.stopcry,
+//            R.id.startcure, R.id.stopcure, R.id.startluv, R.id.stopluv, R.id.startrelove, R.id.stoprelove};
+//
+//    int resMp3[] = {R.raw.mino, R.raw.twice, R.raw.ben, R.raw.shaun, R.raw.heize, R.raw.jennie};
+//
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_music);
+//
+//        for (int btns : playstopBtns) {
+//            Button btn = (Button) findViewById(btns);
+//            btn.setOnClickListener(clickListener);
+//        }
+//
+//
+//}
+//
 //    View.OnClickListener clickListener = new View.OnClickListener() {
 //
 //        public void onClick(View v) {
@@ -174,4 +286,3 @@ public class MusicActivity extends Activity {
 //        Stop();
 //    }
 //
-//}
