@@ -67,7 +67,7 @@ public class MusicPlayer extends AppCompatActivity {
         musicButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                newsong.setVisibility(View.GONE);
+//                newsong.setVisibility(View.GONE);
                 musicButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 videoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 myButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -81,7 +81,7 @@ public class MusicPlayer extends AppCompatActivity {
         videoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                newsong.setVisibility(View.GONE);
+//                newsong.setVisibility(View.GONE);
                 musicButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 videoButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 myButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -95,7 +95,7 @@ public class MusicPlayer extends AppCompatActivity {
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                newsong.setVisibility(View.GONE);
+//                newsong.setVisibility(View.GONE);
                 musicButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 videoButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 myButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
