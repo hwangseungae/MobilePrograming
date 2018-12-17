@@ -7,7 +7,10 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="인기가요 TOP10 - 클릭하세요."
+        android:layout_margin="10dp"
+        android:text="Music List"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ListView
