@@ -23,6 +23,7 @@ package com.musicplayer.hwangseung_ae.musicplayer;
 
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -78,20 +79,23 @@ public class UserActivity extends AppCompatActivity implements ListInterface, De
     // 목록 프래그먼트 FrameLayout 에 add
     private void setList(){
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(R.id.activity_user, list);
+        transaction.replace(R.id.activity_user, list);
         transaction.commit();
     }
 
     @Override
     public void goDetail(){
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(R.id.fragment_goto, detail);
+        transaction.replace(R.id.fragment_goto, detail);
+        Fragment mFragment = getSupportFragmentManager().findFragmentById(R.id.activity_user);
+        transaction.remove(mFragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }
 
     @Override
     public void goDetail(int position) {
+
 
     }
 

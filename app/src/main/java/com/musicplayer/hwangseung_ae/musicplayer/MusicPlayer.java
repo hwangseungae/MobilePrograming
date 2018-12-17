@@ -55,6 +55,7 @@ public class MusicPlayer extends AppCompatActivity {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView parent, View v, int position, long id) {
+
                 // get item
                 ListViewItem item = (ListViewItem) parent.getItemAtPosition(position) ;
 
