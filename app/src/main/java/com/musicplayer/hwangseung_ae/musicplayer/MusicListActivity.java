@@ -31,7 +31,7 @@ public class MusicListActivity extends AppCompatActivity {
         al.add(new Song("열애중",R.drawable.ben,"BEN"));
         al.add(new Song("삐삐",R.drawable.pp,"아이유"));
         al.add(new Song("너를 만나",R.drawable.kim,"폴킴"));
-        al.add(new Song("이별하러 가는 길",R.drawable.im,"임한"));
+        al.add(new Song("이별하러 가는 길",R.drawable.im,"임한별"));
         al.add(new Song("YES or YES",R.drawable.tw,"TWICE"));
         al.add(new Song("첫눈에",R.drawable.he,"헤이즈"));
 
