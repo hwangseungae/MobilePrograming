@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserActivity"
-    android:id="@+id/fragment_goto">
-
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical"-->
-    <!--tools:context=".UserActivity">-->
+    tools:context=".UserActivity">
 
 <LinearLayout
+    android:id="@+id/fragment_del"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -44,16 +36,19 @@
 
         </ListView>
     </LinearLayout>
-
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:id="@+id/activity_user">
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_goto">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:id="@+id/activity_user">
+        </FrameLayout>
 
     </FrameLayout>
 </LinearLayout>
 
-<!--</LinearLayout>-->
 
-</FrameLayout>
+</LinearLayout>

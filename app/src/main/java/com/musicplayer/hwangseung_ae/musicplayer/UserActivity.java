@@ -1,26 +1,5 @@
 package com.musicplayer.hwangseung_ae.musicplayer;
 
-//public class UserActivity extends AppCompatActivity {
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_user);
-//
-//        final ImageButton musicButton = (ImageButton) findViewById(R.id.plus);
-//
-//        musicButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                Intent intent = new Intent(getApplicationContext(), MemoActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//    }
-//}
-
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -82,6 +61,7 @@ public class UserActivity extends AppCompatActivity implements ListInterface, De
         transaction.replace(R.id.activity_user, list);
         transaction.commit();
     }
+
 
     @Override
     public void goDetail(){
