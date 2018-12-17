@@ -28,12 +28,13 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:id="@+id/search"
+            android:id="@+id/setting"
+            android:layout_margin="5dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:scaleType="centerInside"
             android:background="@android:color/transparent"
-            android:src="@drawable/search_img" />
+            android:src="@drawable/settings" />
 
     </LinearLayout>
 
