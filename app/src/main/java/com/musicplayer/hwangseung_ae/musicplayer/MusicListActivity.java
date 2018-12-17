@@ -24,15 +24,15 @@ public class MusicListActivity extends AppCompatActivity {
         setContentView(R.layout.music_list);
 
         // 인기가요 순위 데이터 (다량의 데이터 준비)
-        al.add(new Song("소녀",R.drawable.stopwatch,"오혁(Hyukk Oh)"));
+        al.add(new Song("소녀",R.drawable.stopwatch,"오혁"));
         al.add(new Song("Prologue",R.drawable.stopwatch,"허각"));
-        al.add(new Song("못먹는 감 (Sour Grapes)",R.drawable.stopwatch,"산이(San E)"));
+        al.add(new Song("못먹는 감",R.drawable.stopwatch,"산이(San E)"));
         al.add(new Song("걱정말아요 그대",R.drawable.stopwatch,"이적"));
         al.add(new Song("그날을 내 등 뒤로",R.drawable.stopwatch,"허각"));
-        al.add(new Song("청춘 (feat. 김창완)",R.drawable.stopwatch,"김필(Kim Feel"));
-        al.add(new Song("Hot Pink",R.drawable.stopwatch,"EXID(이엑스아이디)"));
-        al.add(new Song("널 생각해",R.drawable.stopwatch,"윤하(Younha/ユンナ)"));
-        al.add(new Song("사랑은 가슴이 시킨다 Part.3",R.drawable.stopwatch,"버즈(Buzz)"));
+        al.add(new Song("청춘 (feat. 김창완)",R.drawable.stopwatch,"김필"));
+        al.add(new Song("Hot Pink",R.drawable.stopwatch,"EXID"));
+        al.add(new Song("널 생각해",R.drawable.stopwatch,"윤하"));
+        al.add(new Song("사랑은 가슴이 시킨다",R.drawable.stopwatch,"버즈(Buzz)"));
         al.add(new Song("또 다시 사랑",R.drawable.stopwatch,"임창정"));
 
 

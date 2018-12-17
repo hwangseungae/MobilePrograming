@@ -32,23 +32,23 @@ public class MusicPlayer extends AppCompatActivity {
 
         // 첫 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
-                "Ben - 180도", " # Ben 신곡 180도 추가 #") ;
+                "Ben - 180도", " # Ben 신곡 180도 추가 #", "2018.12.17") ;
         // 두 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
-                "MINO - 아낙네", "# 송민호 신곡 아낙네 추가 #") ;
+                "MINO - 아낙네", "# 송민호 신곡 아낙네 추가 #", "2018.12.17") ;
         // 세 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
-                "Update", "버튼 클릭시 공지 사라지는 오류 수정") ;
+                "Update", "버튼 클릭시 공지 사라지는 오류 수정", "2018.12.15") ;
         // 네 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
-                "Update", "전반적인 디자인 수정") ;
+                "Update", "전반적인 디자인 수정", "2018.12.14") ;
         // 다섯 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
-                "Notice!", "원하는 노래 메모장에 기록") ;
+                "Notice!", "원하는 노래 메모장에 기록", "2018.12.12") ;
 
         // 여섯 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
-                "Notice", "어플이름 추천") ;
+                "Notice", "어플이름 추천", "2018.12.12") ;
 
 
         // 위에서 생성한 listview에 클릭 이벤트 핸들러 정의.
@@ -60,6 +60,7 @@ public class MusicPlayer extends AppCompatActivity {
 
                 String titleStr = item.getTitle() ;
                 String descStr = item.getDesc() ;
+                String dateStr = item.getDate() ;
                 Drawable iconDrawable = item.getIcon() ;
 
                 // TODO : use item data.

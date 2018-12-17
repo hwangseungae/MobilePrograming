@@ -42,6 +42,7 @@ public class ListViewAdapter extends BaseAdapter {
         ImageView iconImageView = (ImageView) convertView.findViewById(R.id.img_albumart) ;
         TextView titleTextView = (TextView) convertView.findViewById(R.id.txt_title) ;
         TextView descTextView = (TextView) convertView.findViewById(R.id.txt_sub_title) ;
+        TextView dateTextView = (TextView) convertView.findViewById(R.id.txt_duration) ;
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
         ListViewItem listViewItem = listViewItemList.get(position);
@@ -50,6 +51,7 @@ public class ListViewAdapter extends BaseAdapter {
         iconImageView.setImageDrawable(listViewItem.getIcon());
         titleTextView.setText(listViewItem.getTitle());
         descTextView.setText(listViewItem.getDesc());
+        dateTextView.setText(listViewItem.getDate());
 
         return convertView;
     }
@@ -67,12 +69,13 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem(Drawable icon, String title, String desc) {
+    public void addItem(Drawable icon, String title, String desc, String date) {
         ListViewItem item = new ListViewItem();
 
         item.setIcon(icon);
         item.setTitle(title);
         item.setDesc(desc);
+        item.setDate(date);
 
         listViewItemList.add(item);
     }
