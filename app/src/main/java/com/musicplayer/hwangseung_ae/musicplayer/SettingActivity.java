@@ -102,8 +102,8 @@ public class SettingActivity extends Activity {
         int itemId = item.getItemId();
 
         if (itemId == R.id.action_settings) {
-            Intent SettingActivity = new Intent(this, Setting.class);
-            startActivity(SettingActivity);
+            Intent Setting = new Intent(this, Setting.class);
+            startActivity(Setting);
         }
 
         return super.onOptionsItemSelected(item);

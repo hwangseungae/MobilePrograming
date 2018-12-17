@@ -28,7 +28,7 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:id="@+id/setting"
+            android:id="@+id/settingButton"
             android:layout_margin="5dp"
             android:layout_width="50dp"
             android:layout_height="50dp"

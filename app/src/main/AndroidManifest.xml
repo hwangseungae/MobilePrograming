@@ -31,6 +31,10 @@
         <activity android:name=".VideoActivity" />
         <activity android:name=".UserActivity" />
         <activity android:name=".MusicListActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".SettingMade" />
+        <activity android:name=".Setting" />
+
     </application>
 
 </manifest>

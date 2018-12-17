@@ -73,6 +73,7 @@ public class MusicPlayer extends AppCompatActivity {
         final ImageButton musicButton = (ImageButton) findViewById(R.id.musicButton);
         final ImageButton videoButton = (ImageButton) findViewById(R.id.videoButton);
         final ImageButton myButton =  (ImageButton) findViewById(R.id.myButton);
+        final ImageButton settingButton =  (ImageButton) findViewById(R.id.settingButton);
 
         musicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +109,14 @@ public class MusicPlayer extends AppCompatActivity {
                 myButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
 
                 Intent intent = new Intent(getApplicationContext(), UserActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        settingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Setting.class);
                 startActivity(intent);
             }
         });
