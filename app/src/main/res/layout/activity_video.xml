@@ -7,32 +7,42 @@
     tools:context=".VideoActivity">
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/naver"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:orientation="vertical"
-            android:src="@drawable/stopwatch" />
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:src="@drawable/naver" />
 
         <ImageButton
             android:id="@+id/daum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:orientation="vertical"
-            android:src="@drawable/stopwatch" />
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/daum" />
 
         <ImageButton
             android:id="@+id/youtube"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:orientation="vertical"
-            android:src="@drawable/stopwatch" />
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/youtube" />
 
         <ImageButton
             android:id="@+id/sprots"
