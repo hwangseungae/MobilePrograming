@@ -32,13 +32,23 @@ public class MusicPlayer extends AppCompatActivity {
 
         // 첫 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
-                "가수 - 제목", "0집 타이틀곡 노래 추가") ;
+                "Ben - 180도", " # Ben 신곡 180도 추가 #") ;
         // 두 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
-                "가수 - 젬목", "0집 타이틀곡 노래 추가") ;
+                "MINO - 아낙네", "# 송민호 신곡 아낙네 추가 #") ;
         // 세 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
-                "Update", "000 내용 수정 및 업데이트") ;
+                "Update", "버튼 클릭시 공지 사라지는 오류 수정") ;
+        // 네 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
+                "Update", "전반적인 디자인 수정") ;
+        // 다섯 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
+                "Notice!", "원하는 노래 메모장에 기록") ;
+
+        // 여섯 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.notice_img),
+                "Notice", "어플이름 추천") ;
 
 
         // 위에서 생성한 listview에 클릭 이벤트 핸들러 정의.
