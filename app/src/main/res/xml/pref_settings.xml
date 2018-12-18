@@ -9,7 +9,7 @@
         android:title="사용자 이름 사용" />
 
     <EditTextPreference
-        android:defaultValue="Mir"
+        android:defaultValue="UserName"
         android:dependency="useUserName"
         android:key="userName"
         android:maxLines="1"

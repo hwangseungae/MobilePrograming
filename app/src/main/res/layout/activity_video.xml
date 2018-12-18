@@ -1,57 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VideoActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <TableRow
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical">
-
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
         <ImageButton
-            android:id="@+id/naver"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:orientation="vertical"
-            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/naver"
+            android:background="@android:color/transparent"
+            android:layout_column="1"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
             android:scaleType="centerInside"
             android:background="@android:color/transparent"
-            android:src="@drawable/naver" />
-
+            android:src="@drawable/youtube"
+            android:layout_column="2" />
         <ImageButton
-            android:id="@+id/daum"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
             android:scaleType="centerInside"
-            android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:src="@drawable/daum" />
+            android:src="@drawable/daum"
+            android:layout_column="3" />
 
-        <ImageButton
-            android:id="@+id/youtube"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:orientation="vertical"
-            android:scaleType="centerInside"
-            android:layout_gravity="center"
-            android:background="@android:color/transparent"
-            android:src="@drawable/youtube" />
+    </TableRow>
 
-        <ImageButton
-            android:id="@+id/sprots"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:src="@drawable/stopwatch" />
+</TableLayout>
 
 
-    </LinearLayout>
 
-</RelativeLayout>
