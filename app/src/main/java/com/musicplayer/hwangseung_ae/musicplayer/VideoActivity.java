@@ -23,7 +23,6 @@ public class VideoActivity extends AppCompatActivity {
         but1 = (ImageButton) findViewById(R.id.naver);
         but2 = (ImageButton) findViewById(R.id.daum);
         but3 = (ImageButton) findViewById(R.id.youtube);
-        but4 = (ImageButton) findViewById(R.id.sprots);
 
         but1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,16 +50,6 @@ public class VideoActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("http://www.youtube.com"));
-                startActivity(intent);
-            }
-        });
-
-        but4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.naversport.com"));
                 startActivity(intent);
             }
         });

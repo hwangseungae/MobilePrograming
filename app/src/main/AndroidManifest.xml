@@ -34,6 +34,8 @@
         <activity android:name=".SettingActivity" />
         <activity android:name=".SettingMade" />
         <activity android:name=".Setting" />
+        <activity android:name=".NoticeActivity" />
+
 
     </application>
 

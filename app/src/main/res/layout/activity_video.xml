@@ -12,7 +12,9 @@
         android:layout_width="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="50dp">
+
         <ImageButton
+            android:id="@+id/naver"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
@@ -20,7 +22,9 @@
             android:src="@drawable/naver"
             android:background="@android:color/transparent"
             android:layout_column="1"/>
+
         <ImageButton
+            android:id="@+id/youtube"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
@@ -28,7 +32,9 @@
             android:background="@android:color/transparent"
             android:src="@drawable/youtube"
             android:layout_column="2" />
+
         <ImageButton
+            android:id="@+id/daum"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"

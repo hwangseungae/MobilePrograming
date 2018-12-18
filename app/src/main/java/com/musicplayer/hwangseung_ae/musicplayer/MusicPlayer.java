@@ -74,6 +74,8 @@ public class MusicPlayer extends AppCompatActivity {
         final ImageButton videoButton = (ImageButton) findViewById(R.id.videoButton);
         final ImageButton myButton =  (ImageButton) findViewById(R.id.myButton);
         final ImageButton settingButton =  (ImageButton) findViewById(R.id.settingButton);
+        final ImageButton notice =  (ImageButton) findViewById(R.id.notice);
+
 
         musicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,6 +119,16 @@ public class MusicPlayer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Setting.class);
+                startActivity(intent);
+            }
+        });
+
+
+        notice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), NoticeActivity.class);
                 startActivity(intent);
             }
         });

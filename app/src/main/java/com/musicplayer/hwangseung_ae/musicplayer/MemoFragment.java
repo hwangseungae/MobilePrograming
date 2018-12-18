@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.sql.SQLException;
 import java.util.Date;
@@ -63,6 +64,8 @@ public class MemoFragment extends Fragment implements View.OnClickListener{
         switch (v.getId()){
             case R.id.btnSave:
                 try {
+                    Toast.makeText(getActivity(), "저장!", Toast.LENGTH_SHORT).show();
+
                     Memo memo = new Memo();
                     String string = editMemo.getText().toString();
                     memo.setMemo(string);
@@ -75,7 +78,10 @@ public class MemoFragment extends Fragment implements View.OnClickListener{
                 }
                 break;
             case R.id.btnCancel:
+                Toast.makeText(getActivity(), "취소", Toast.LENGTH_SHORT).show();
+
                 detailInterface.backToList();
+
                 break;
         }
     }
