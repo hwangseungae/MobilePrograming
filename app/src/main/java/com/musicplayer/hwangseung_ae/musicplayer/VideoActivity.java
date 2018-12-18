@@ -4,15 +4,23 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageButton;
+
 
 public class VideoActivity extends AppCompatActivity {
 
     ImageButton but1;
     ImageButton but2;
     ImageButton but3;
-    ImageButton but4;
+
+    private WebView mWebView;
+    private String myUrl = "https://www.google.com/"; // 접속 URL (내장HTML의 경우 왼쪽과 같이 쓰고 아니면 걍 URL)
 
 
     @Override
@@ -53,6 +61,33 @@ public class VideoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // 웹뷰 셋팅팅
+        mWebView = (WebView) findViewById(R.id.webView);
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        //mWebView.loadUrl("http://www.pois.co.kr/mobile/login.do");
+
+        mWebView.loadUrl(myUrl); // 접속 URL
+        mWebView.setWebChromeClient(new WebChromeClient());
+        mWebView.setWebViewClient(new WebViewClientClass());
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
+            mWebView.goBack();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    private class WebViewClientClass extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            Log.d("check URL",url);
+            view.loadUrl(url);
+            return true;
+        }
     }
 }
+
 
